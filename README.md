@@ -2,7 +2,7 @@
 
 > A collection of React apps built by [Jack Oliver](http://www.jackoliver.info/react-daily-ui/) and blogged by the [Fullstack React](https://fullstackreact.com) team.
 
-Read the [full series](#) and check out the [CodePen collection](http://codepen.io/collection/DoLZRm/).
+Read the [full series](https://fullstackreact.com/articles) and check out the [CodePen collection](http://codepen.io/collection/DoLZRm/).
 
 We are excited to be partnering with [Jack Oliver](https://twitter.com/mrjackolai), a designer and developer who is embarking on an [ambitious project](http://codepen.io/collection/DoLZRm/) to create 100 React UI components in 100 days. 
 
@@ -22,7 +22,7 @@ We've used the [`create-react-app`](https://github.com/facebookincubator/create-
 You'll need to have `node` and `npm` installed on your machine to run the commands. Head over to the [node.js](https://nodejs.org/en/) website and download the neccessary files to get those installed. 
 
 ##Authors
-This series is a joint effort between [Jack Oliver](#) and the [Fullstack React Team](#)
+This series is a joint effort between [Jack Oliver](http://www.jackoliver.info) and the [Fullstack React Team](https://fullstackreact.com)
 
 ## Contributing
 
