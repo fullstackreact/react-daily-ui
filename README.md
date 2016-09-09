@@ -27,7 +27,7 @@ In the series, we will be taking Jack Oliver's code and design and desconstructi
             <td><strong>001</strong></td>
             <td><img src="resources/images/readme/thumbnails/daily-ui-001.png"></img></td>
             <td>Create a sign-up form</td>
-            <td align="center"><a href="https://fullstackreact.com/react-daily-ui/001-sign-up-form/">:dolphin:</a></td>
+            <td align="center"><a href="https://fullstackreact.com/react-daily-ui/001-sign-up-form/">:white_check_mark: :dolphin: :arrow_right:</a></td>
         </tr>
         <tr>
             <td><strong>002</strong></td>
