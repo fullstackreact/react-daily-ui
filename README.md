@@ -11,7 +11,7 @@ In the series, we will be taking Jack Oliver's code and design and desconstructi
 ##Instructions
 All of Jack Oliver's designs and code are hosted on Codepen. For the purposes of this blog series, we have created this Github repository containing all the code for each daily component. 
 
-We've used the [`create-react-app`](https://github.com/facebookincubator/create-react-app) tool to set up our environment. To run the code cd into each individual folder and run the following commands:
+We've used the [`create-react-app`](https://github.com/facebookincubator/create-react-app) tool to set up our environment. To run the code `cd` into each individual folder and run the following commands:
 
 1. `npm install` will install all the libraries you'll need to get each Daily UI running.
 
@@ -36,7 +36,7 @@ ___
 # Fullstack React Book
 
 <a href="https://fullstackreact.com">
-<img align="right" src="resources/readme/fullstack-react-hero-book.png" alt="Fullstack React Book" width="155" height="250" />
+<img align="right" src="fullstack-react-hero-book.png" alt="Fullstack React Book" width="155" height="250" />
 </a>
 
 This React Daily UI repository was built alongside the React Daily UI blog series.
