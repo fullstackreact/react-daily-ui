@@ -12,6 +12,44 @@ We are excited to be partnering with [Jack Oliver](https://twitter.com/mrjackola
 
 In the series, we will be taking Jack Oliver's code and design and desconstructing them to give you a step-by-step picture of how all the pieces fit together and hopefully inspire you to write some React code of your own.
 
+## Days
+<table>
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Preview</th>
+            <th>Description</th>
+            <th>Blog</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>001</strong></td>
+            <td><img src="resources/images/readme/thumbnails/daily-ui-001.png"></img></td>
+            <td>Create a sign-up form</td>
+            <td align="center"><a href="https://fullstackreact.com/react-daily-ui/001-sign-up-form/">:dolphin:</a></td>
+        </tr>
+        <tr>
+            <td><strong>002</strong></td>
+            <td><img src="resources/images/readme/thumbnails/daily-ui-002.png"></img></td>
+            <td>Checkout form</td>
+            <td align="center">:soon:</td>
+        </tr>
+        <tr>
+            <td><strong>003</strong></td>
+            <td><img src="resources/images/readme/thumbnails/daily-ui-003.png"></img></td>
+            <td>Netflix</td>
+            <td align="center">:soon:</td>
+        </tr>
+        <tr>
+            <td><strong>004</strong></td>
+            <td><img src="resources/images/readme/thumbnails/daily-ui-004.png"></img></td>
+            <td>3D Calculator</td>
+            <td align="center">:soon:</td>
+        </tr>
+    </tbody>
+</table>
+
 ## Instructions
 All of Jack Oliver's original designs and code are hosted on Codepen. For the purposes of this blog series, we have created this Github repository containing all the code for each daily component. 
 
