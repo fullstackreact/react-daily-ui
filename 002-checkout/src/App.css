@@ -1,0 +1,358 @@
+@import "https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900";
+@import "https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900";
+body {
+  background: #17183B;
+  color: #17183B;
+  font-family: 'Lato', sans-serif;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #17183B;
+}
+.App .Overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  opacity: .2;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: white;
+  z-index: 10;
+  padding: 20px;
+}
+
+.Container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 532px;
+  max-width: 650px;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.ImagePreview {
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  width: 50%;
+}
+.ImagePreview::before {
+  width: 100%;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(23, 24, 59, 0) 0%, rgba(23, 24, 59, 0.45) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(23, 24, 59, 0) 0%, rgba(23, 24, 59, 0.45) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+  /* IE6-9 */
+}
+.ImagePreview .WorkspaceOverview {
+  color: white;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 20px;
+}
+.ImagePreview .WorkspaceOverview .WorkspaceInformation .WorkspaceName {
+  font-family: 'Playfair Display';
+  font-weight: 600;
+  font-size: 36px;
+}
+.ImagePreview .WorkspaceOverview .WorkspaceInformation .WorkspacePrice {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 20px;
+}
+.ImagePreview .WorkspaceOverview .WorkspaceInformation .WorkspacePrice .Price {
+  font-size: 26px;
+  font-weight: 200;
+}
+.ImagePreview .WorkspaceOverview .WorkspaceInformation .WorkspacePrice .Duration {
+  font-size: 16px;
+  font-weight: 300;
+  position: relative;
+  bottom: 2px;
+  margin-left: 5px;
+}
+.ImagePreview .WorkspaceOverview .WorkspaceMeta {
+  color: white;
+  line-height: 1.6;
+  font-size: 13px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.ImagePreview .WorkspaceOverview .WorkspaceMeta strong {
+  font-weight: 600;
+}
+
+.Checkout {
+  background: white;
+  width: 50%;
+}
+.Checkout .OrderSummary {
+  border-bottom: 1px solid #f2f2f2;
+  padding-bottom: 10px;
+}
+.Checkout .OrderSummary table {
+  font-size: 12px;
+  margin: 0 20px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  width: calc(100% - 40px);
+  opacity: .8;
+  font-weight: 400;
+}
+.Checkout .OrderSummary table tr td:last-child {
+  text-align: right;
+  font-weight: 600;
+}
+.Checkout .OrderSummary .Total {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.Checkout .OrderSummary .Total .TotalLabel {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.Checkout .OrderSummary .Total .Amount {
+  font-size: 18px;
+  margin-left: auto;
+}
+.Checkout .Title {
+  font-family: 'Playfair Display';
+  font-size: 18px;
+  padding: 20px;
+}
+
+.BasicInput {
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+.BasicInput label {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.BasicInput input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #17183B;
+  font-family: 'Lato', sans-serif;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  outline: none;
+}
+.BasicInput input:focus {
+  border-bottom: 1px solid #FFB49A;
+}
+
+.ExpiryDate {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+.ExpiryDate label {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.ExpiryDate div:first-child {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+.ExpiryDate .Expiry {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.ExpiryDate input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #17183B;
+  font-family: 'Lato', sans-serif;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  outline: none;
+}
+.ExpiryDate select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  padding: 10px;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid #17183B;
+  border-bottom: 1px solid #17183B;
+  font-family: 'Lato', sans-serif;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  outline: none;
+  margin-right: 10px;
+}
+.ExpiryDate .CVCField {
+  width: 20%;
+}
+
+.CVC {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+.CVC label {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.CVC input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #17183B;
+  font-family: 'Lato', sans-serif;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  outline: none;
+}
+.CVC input:focus {
+  border-bottom: 1px solid #FFB49A;
+}
+.CVC span {
+  display: block;
+  padding-top: 20px;
+  margin-left: 10px;
+  color: #FFB49A;
+  font-size: 11px;
+  border-bottom: 1px dotted #FFB49A;
+}
+
+.CheckoutButton {
+  padding: 0 20px;
+  text-align: center;
+}
+.CheckoutButton button {
+  background: #ffa181;
+  color: white;
+  border: 0;
+  border-radius: 2px;
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 300;
+  outline: none;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+.CheckoutButton button:hover {
+  background: #ff8e67;
+}
+.CheckoutButton button:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+}
+.CheckoutButton span {
+  font-size: 11px;
+  color: #bfbfbf;
+  font-weight: 300;
+  text-align: center;
+}
+
+.overlay-enter {
+  opacity: 0.01;
+}
+
+.overlay-enter.overlay-enter-active {
+  opacity: .2;
+  -webkit-transition: opacity .5s ease .5s;
+  transition: opacity .5s ease .5s;
+}
+
+.container-enter {
+  opacity: 0.01;
+}
+
+.container-enter.container-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
