@@ -38,8 +38,8 @@ In the series, we will be taking Jack Oliver's code and design and desconstructi
         <tr>
             <td><strong>003</strong></td>
             <td><img src="resources/images/readme/thumbnails/daily-ui-003.png"></img></td>
-            <td>Netflix</td>
-            <td align="center">:soon:</td>
+            <td>Netflix Landing Page</td>
+            <td align="center"><a href="https://fullstackreact.com/react-daily-ui/003-landing-page/">:white_check_mark: :dolphin: :arrow_right:</a></td>
         </tr>
         <tr>
             <td><strong>004</strong></td>
