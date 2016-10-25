@@ -1,0 +1,130 @@
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+body {
+  background: #EBEBEB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Share Tech Mono'; }
+
+.App {
+  height: 400px;
+  width: 300px;
+  perspective: 0 200px;
+  background: #EBEBEB;
+  transform: scale(0.8) rotateX(45deg) rotateZ(45deg);
+  transition: transform .5s ease .5s;
+  position: relative; }
+  .App:hover {
+    transform: scale(1.5) rotateX(0) rotateZ(0); }
+    .App:hover::before {
+      opacity: 0;
+      height: 0; }
+    .App:hover::after {
+      opacity: 0;
+      width: 0; }
+  .App::before {
+    position: absolute;
+    content: '';
+    background: #bdc7b7;
+    width: 100%;
+    height: 10px;
+    top: 100%;
+    left: 10px;
+    transform: skewX(45deg);
+    opacity: 1;
+    transform-origin: 0 100%;
+    perspective: 0 200px;
+    transition: transform .5s ease .5s, height .5s ease .5s, opacity .5s ease .5s;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 1px; }
+  .App::after {
+    position: absolute;
+    content: '';
+    background: #d7ddd3;
+    width: 10px;
+    height: 100%;
+    bottom: 0;
+    left: 100%;
+    transform: skewY(45deg);
+    transform-origin: 0 100%;
+    perspective: 0 200px;
+    opacity: 1;
+    transition: transform .5s ease .5s, width .5s ease .5s, opacity .5s ease .5s;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 1px; }
+
+.Display {
+  background: #2B293D;
+  color: #59C3C3;
+  text-shadow: 0 0 5px rgba(89, 195, 195, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 29px;
+  box-sizing: border-box;
+  height: 20%;
+  overflow: hidden;
+  font-size: 24px;
+  position: relative; }
+  .Display::after {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f1f1f1+50,e1e1e1+51,f6f6f6+100;White+Gloss+%231 */
+    background: white;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, white 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, white 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, white 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 );
+    /* IE6-9 */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    height: 100%;
+    mix-blend-mode: overlay;
+    display: block;
+    z-index: 2; }
+
+.Buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 80%; }
+
+.Button {
+  background: #cad2c5;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #cad2c5 0%, #abb5aa 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #cad2c5 0%, #abb5aa 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #cad2c5 0%, #abb5aa 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cad2c5', endColorstr='#abb5aa',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  height: 20%;
+  min-width: 25%; }
+  .Button[data-size="2"] {
+    height: 40%; }
+  .Button[data-value="null"] {
+    pointer-events: none; }
+  .Button:hover {
+    background: #d7ddd3;
+    cursor: pointer; }
+  .Button:active {
+    background: #bdc7b7; }

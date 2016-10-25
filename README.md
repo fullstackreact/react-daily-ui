@@ -45,7 +45,7 @@ In the series, we will be taking Jack Oliver's code and design and desconstructi
             <td><strong>004</strong></td>
             <td><img src="resources/images/readme/thumbnails/daily-ui-004.png"></img></td>
             <td>3D Calculator</td>
-            <td align="center">:soon:</td>
+            <td align="center"><a href="https://fullstackreact.com/react-daily-ui/004-calculator/">:white_check_mark: :dolphin: :arrow_right:</a></td>
         </tr>
     </tbody>
 </table>

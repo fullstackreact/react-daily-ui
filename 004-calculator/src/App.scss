@@ -1,0 +1,155 @@
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+
+// Colors
+$seaserpent: #59C3C3;
+$gunmetal: #2B293D;
+$isabelline: #EBEBEB;
+$pastelgray: #CAD2C5;
+$darkseagreen: #84A98C;
+
+// Styles
+body {
+	background: $isabelline;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	font-family: 'Share Tech Mono';
+}
+
+.App {
+	height: 400px;
+	width: 300px;
+	// overflow: hidden;
+	// border-radius: 10px;
+	// box-shadow: 0 5px 10px rgba(black, .1);
+	perspective: 0 200px;
+	background: $isabelline;
+	transform: scale(.8) rotateX(45deg) rotateZ(45deg) ;
+	transition: transform .5s ease .5s;
+	position: relative;
+	
+	&:hover {
+		transform: scale(1.5) rotateX(0) rotateZ(0);
+		
+		&::before {
+			opacity: 0;
+			height: 0;
+		}
+		
+		&::after {
+			opacity: 0;
+			width :0;
+		}
+	}
+	
+	&::before {
+		position: absolute;
+		content: '';
+		background: darken($pastelgray, 5);
+		width: 100%;
+		height: 10px;
+		top: 100%;
+		left: 10px;
+		transform: skewX(45deg);
+		opacity: 1;
+		transform-origin: 0 100%;
+		perspective: 0 200px;
+		transition: transform .5s ease .5s, height .5s ease .5s, opacity .5s ease .5s;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 1px;
+	}
+	
+	&::after {
+		position: absolute;
+		content: '';
+		background: lighten($pastelgray, 5);
+		width: 10px;
+		height: 100%;
+		bottom: 0;
+		left: 100%;
+		transform: skewY(45deg);
+		transform-origin: 0 100%;
+		perspective: 0 200px;
+		opacity: 1;
+		transition: transform .5s ease .5s, width .5s ease .5s, opacity .5s ease .5s;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 1px;
+	}
+}
+
+// Display
+.Display {
+	background: $gunmetal;
+	color: $seaserpent;
+	text-shadow: 0 0 5px rgba($seaserpent, .5);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0 29px;
+	box-sizing: border-box;
+	height: 20%;
+	overflow: hidden;
+	font-size: 24px;
+	position: relative;
+	
+	&::after {
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f1f1f1+50,e1e1e1+51,f6f6f6+100;White+Gloss+%231 */
+		background: rgb(255,255,255); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		pointer-events: none;
+		height: 100%;
+		mix-blend-mode: overlay;
+		display: block;
+		z-index: 2;
+	}
+}
+
+// Button
+.Buttons { display: flex; flex-wrap: wrap; flex-direction: column; height: 80%; }
+.Button {
+	// background: $pastelgray;
+	background: rgb(202,210,197); /* Old browsers */
+	background: -moz-linear-gradient(45deg, rgba(202,210,197,1) 0%, rgba(171,181,170,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, rgba(202,210,197,1) 0%,rgba(171,181,170,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, rgba(202,210,197,1) 0%,rgba(171,181,170,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cad2c5', endColorstr='#abb5aa',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	display: flex;
+	box-sizing: border-box;
+	border: 1px solid rgba(black, .05);
+	align-items: center;
+	justify-content: center;
+	width: 25%;
+	font-size: 24px;
+	color: rgba(black, .5);
+	height: 20%;
+	min-width: 25%;
+	
+	&[data-size="2"] {
+		height: 40%;
+	}
+	
+	&[data-value="null"] {
+		pointer-events: none;
+	}
+	
+	&:hover {
+		background: lighten($pastelgray, 5);
+		cursor: pointer;
+	}
+	
+	&:active {
+		background: darken($pastelgray, 5);
+	}
+}
+
