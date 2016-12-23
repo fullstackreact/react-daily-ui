@@ -1,6 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900";
 body {
-  background-image: url(https://unsplash.it/1400/795);
+  background-image: url(http://psdesignfl.com/images/wp/bg_blue_gradient.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,9 +23,9 @@ body {
 
 .Modal {
   background: #3E363F;
-  border-radius: 2px;
+  border-radius: 30px;
   padding: 20px;
-  width: 200px;
+  width: 500px;
 }
 
 .Input {
@@ -89,16 +89,16 @@ button {
   text-transform: uppercase;
   width: 100%;
 }
-button .fa {
+button .fa, a {
   font-size: 12px;
   margin-left: auto;
   position: relative;
   top: 1px;
 }
-button:hover {
+button:hover, a{
   transform: scale(1.02);
 }
-button:active {
+button:active, a {
   transform: scale(0.99);
 }
 
@@ -120,4 +120,9 @@ button:active {
   margin-top: -30px;
   opacity: .01;
   transition: opacity .3s ease, margin .5s ease;
+}
+
+a {
+    width: 450px;
+    height: 18px;
 }
