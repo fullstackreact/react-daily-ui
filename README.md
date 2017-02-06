@@ -47,6 +47,24 @@ In the series, we will be taking Jack Oliver's code and design and desconstructi
             <td>3D Calculator</td>
             <td align="center"><a href="https://fullstackreact.com/react-daily-ui/004-calculator/">:white_check_mark: :dolphin: :arrow_right:</a></td>
         </tr>
+        <tr>
+            <td><strong>005</strong></td>
+            <td><img src="resources/images/readme/thumbnails/daily-ui-005.png"></img></td>
+            <td>Weather App Icon</td>
+            <td align="center"><a href="https://fullstackreact.com/react-daily-ui/005-app-icon/">:white_check_mark: :dolphin: :arrow_right:</a></td>
+        </tr>
+        <tr>
+            <td><strong>006</strong></td>
+            <td><img src="resources/images/readme/thumbnails/daily-ui-006.png"></img></td>
+            <td>Profile Page</td>
+            <td align="center"><a href="https://fullstackreact.com/react-daily-ui/006-profile-page/">:white_check_mark: :dolphin: :arrow_right:</a></td>
+        </tr>
+        <tr>
+            <td><strong>007</strong></td>
+            <td><img src="resources/images/readme/thumbnails/daily-ui-007.png"></img></td>
+            <td>Reactagram</td>
+            <td align="center"><a href="https://fullstackreact.com/react-daily-ui/007-reactagram/">:white_check_mark: :dolphin: :arrow_right:</a></td>
+        </tr>
     </tbody>
 </table>
 
