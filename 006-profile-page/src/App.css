@@ -1,0 +1,55 @@
+@import 'https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto';
+.App {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Roboto';
+  display: flex; }
+  @media screen and (max-width: 980px) {
+    .App {
+      flex-direction: column; } }
+  .App .Image {
+    width: 50vw;
+    position: relative;
+    background-size: cover;
+    background-position: center; }
+    @media screen and (max-width: 980px) {
+      .App .Image {
+        width: 100vw;
+        height: 70vh; } }
+  .App .Profile {
+    width: 50vw;
+    padding: 5vw 10vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    color: #2C2C54; }
+    @media screen and (max-width: 980px) {
+      .App .Profile {
+        width: 100vw;
+        height: 30vh; } }
+    .App .Profile .Name {
+      font-size: 6vw;
+      font-family: 'Abril Fatface';
+      margin-bottom: 4vw; }
+    .App .Profile .Bio {
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 3vw;
+      opacity: .4; }
+    .App .Profile .Quote {
+      margin-top: auto; }
+      .App .Profile .Quote blockquote {
+        font-size: 36px;
+        font-family: 'Abril Fatface';
+        font-style: italic;
+        line-height: 1.4;
+        margin-bottom: .6em; }
+      .App .Profile .Quote .byline {
+        font-family: 'Times', serif;
+        text-align: right;
+        font-size: 22px;
+        font-style: italic;
+        opacity: .25; }

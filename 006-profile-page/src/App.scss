@@ -1,0 +1,86 @@
+@import 'https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto';
+
+// Colors
+$spacecadet: #2C2C54;
+$jazzberryjam: #A40E4C;
+$cambridgeblue: #ACC3A6;
+$peachpuff: #F5D6BA;
+$sandybrown: #F49D6E;
+
+@mixin mq($width) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
+
+.App {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Roboto';
+	display: flex;
+	
+	@include mq(980px) {
+		flex-direction: column;
+	}
+	
+	.Image {
+		width: 50vw;
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		
+		@include mq(980px) {
+			width: 100vw;
+			height: 70vh;
+		}
+	}
+	
+	.Profile {
+		width: 50vw;
+		padding: 5vw 10vw;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		color: $spacecadet;
+		
+		@include mq(980px) {
+			width: 100vw;
+			height: 30vh;
+		}
+		
+		.Name {
+			font-size: 6vw;
+			font-family: 'Abril Fatface';
+			margin-bottom: 4vw;
+		}
+		
+		.Bio {
+			font-size: 15px;
+			line-height: 1.8;
+			margin-bottom: 3vw;
+			opacity: .4;
+		}
+		
+		.Quote {
+			margin-top: auto;
+			blockquote{
+				font-size: 36px;
+				font-family: 'Abril Fatface';
+				font-style: italic;
+				line-height: 1.4;
+				margin-bottom: .6em;
+			}
+			
+			.byline {
+				font-family: 'Times', serif;
+				text-align: right;
+				font-size: 22px;	
+				font-style: italic;
+				opacity: .25;
+			}
+		}
+	}
+}

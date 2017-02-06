@@ -1,0 +1,197 @@
+// Fonts
+@import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+
+// Colors
+$white: #FFFFFF;
+$sunsetorange: #F05D5E;
+$irresistable: #AF3B6E;
+$yankeesblue: #252D3F;
+$mediumspringgreen: #21FA90;
+
+// Mixins
+@mixin mq($width) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
+
+// Styles
+.App {
+	align-items: center;
+	font-family: 'Lato', sans-serif;
+	display: flex;
+	font-weight: 300;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	background: $yankeesblue;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.ImageBG {
+	position: absolute;
+	top: -5vh;
+	left: -5vw;
+	width: 110vw;
+	height: 110vh;
+	background-size: cover;
+	filter: blur(15px);
+	opacity: 1;
+	mix-blend-mode: multiply;
+}
+
+.Settings {
+	width: 90vw;
+	height: 90vh;
+	position: relative;
+	z-index: 2;
+}
+
+.MainWrapper {
+	display: flex;
+	width: 100%;
+	height: 85%;
+
+	.Sidebar {
+		width: 30%;
+		max-width: 350px;
+		height: 100%;
+		background: rgba(lighten($yankeesblue, 5), .85);
+		
+		@include mq(880px) {
+			display: none;
+		}
+		
+		.Title {
+			width: 100%;
+			padding: 20px;
+			box-sizing: border-box;
+			border-bottom: 1px solid rgba($white, .1);
+			color: $white;
+			text-transform: uppercase;
+			font-weight: 600;
+			letter-spacing: .2em;
+			font-size: 12px;
+		}
+		
+		.Setting {
+			padding: 0 20px;
+			margin-top: 20px;
+			border-bottom: 1px solid rgba($white, .05);
+			
+			label {
+				font-weight: 400;
+				text-transform: uppercase;
+				color: $white;
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 5px;
+				font-size: 12px;
+				letter-spacing: .2em;
+				opacity: .5;
+			}
+			
+			input {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	
+	.ImageContainer {
+		width: 50%;
+		background: rgba(darken($yankeesblue, 5), .5);
+		display: flex;
+		flex: 1 0 auto;
+		
+		.Filter {
+			display: flex;
+			flex: 1 0 auto;
+			justify-content: center;
+			align-items: center;
+		}
+		.Image {
+			height: 90%;
+			width: 90%;
+			background-size: cover;
+			box-shadow: 0 10px 20px rgba(black, .5);
+			background-position: center;
+			position: relative;
+			transition: filter .125s ease;
+			
+			&::before {
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				// background: blue;
+				// mix-blend-mode: color;
+				opacity: .3;
+			}
+			
+			&::after {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				mix-blend-mode: overlay;
+				left: 0;
+				z-index: 3;
+				content: '';
+				// background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+				// background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+				// background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+			}
+		}
+	}
+}
+.FilterList {
+	width: 100%;
+	height: calc(15% - 10px);
+	background: rgba(lighten($yankeesblue, 5), .45);
+	box-sizing: border-box;
+	padding: 20px;
+	display: flex;
+	overflow-x: auto;
+	
+	.Filter {
+		// min-width: 150px;
+		// width: 150px;
+		width: 25%;
+		height: 100%;
+		position: relative;
+		flex: 1 0 1;
+		margin-right: 20px;
+		background: darken($yankeesblue, 2);
+		box-shadow: 0 10px 20px 0 rgba(black, .25);
+		transition: box-shadow .25s ease, transform .25s ease;
+		
+		&:hover {
+			cursor:pointer;
+			box-shadow: 0 10px 20px -10px rgba(black, 1);
+			transform: scale(1.1);
+		}
+		
+		&:last-child {
+			margin-right: 0px;
+		}
+		
+		// FilterImage
+		.Image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			transition: filter .25s ease .25s;
+		}
+	}
+}

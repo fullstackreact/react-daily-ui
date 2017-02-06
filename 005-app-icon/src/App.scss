@@ -1,0 +1,80 @@
+
+@import 'https://fonts.googleapis.com/css?family=Lato';
+@import 'weather/css/weather-icons.min.css';
+@import 'weather/css/weather-icons-wind.min.css';
+body {
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Lato';
+	background: #111;
+}
+
+.Sky {
+	height: 2400px;
+	width: 200px;
+	background: #373056; // Old browsers
+	background: -moz-linear-gradient(top,  #373056 1%, #362942 8%, #362942 14%, #82bfe5 40%, #c3e9f7 57%, #efad51 67%, #a33737 70%, #192f49 97%); // FF3.6-15
+	background: -webkit-linear-gradient(top,  #373056 1%,#362942 8%,#362942 14%,#82bfe5 40%,#c3e9f7 57%,#efad51 67%,#a33737 70%,#192f49 97%); // Chrome10-25,Safari5.1-6
+	background: linear-gradient(to bottom,  #373056 1%,#362942 8%,#362942 14%,#82bfe5 40%,#c3e9f7 57%,#efad51 67%,#a33737 70%,#192f49 97%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373056', endColorstr='#192f49',GradientType=0 ); // IE6-9
+
+	position: absolute;
+	left: 0;
+	top: -200px;
+	z-index: 2;
+	transition: top 2s ease 1s;
+}
+
+// Sky animation
+
+.Icon {
+	width: 200px;
+	height: 200px;
+	
+	border-radius: 30px;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+	
+	// For loop
+	@for $i from 0 through 23 {
+		&[data-hour='#{$i}'] {
+			.Sky {
+				top: -100 * ($i - 1) + px;
+			}
+		}
+	}
+	
+}
+.WeatherIcon{
+	width:100px;
+	height:100px;
+	position:absolute;
+	top:25%;
+	left:25%;
+	z-index: 5;
+	color:white;
+	font-size:90px;
+	text-align:center;
+}
+.Information {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	z-index: 99;
+	padding: 10px 30px;
+	color: white;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	
+	.Location {
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+	
+}

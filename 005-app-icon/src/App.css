@@ -1,0 +1,107 @@
+@import 'https://fonts.googleapis.com/css?family=Lato';
+@import url(weather/css/weather-icons.min.css);
+@import url(weather/css/weather-icons-wind.min.css);
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato';
+  background: #111; }
+
+.Sky {
+  height: 2400px;
+  width: 200px;
+  background: #373056;
+  background: -moz-linear-gradient(top, #373056 1%, #362942 8%, #362942 14%, #82bfe5 40%, #c3e9f7 57%, #efad51 67%, #a33737 70%, #192f49 97%);
+  background: -webkit-linear-gradient(top, #373056 1%, #362942 8%, #362942 14%, #82bfe5 40%, #c3e9f7 57%, #efad51 67%, #a33737 70%, #192f49 97%);
+  background: linear-gradient(to bottom, #373056 1%, #362942 8%, #362942 14%, #82bfe5 40%, #c3e9f7 57%, #efad51 67%, #a33737 70%, #192f49 97%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373056', endColorstr='#192f49',GradientType=0 );
+  position: absolute;
+  left: 0;
+  top: -200px;
+  z-index: 2;
+  transition: top 2s ease 1s; }
+
+.Icon {
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2; }
+  .Icon[data-hour='0'] .Sky {
+    top: 100px; }
+  .Icon[data-hour='1'] .Sky {
+    top: 0px; }
+  .Icon[data-hour='2'] .Sky {
+    top: -100px; }
+  .Icon[data-hour='3'] .Sky {
+    top: -200px; }
+  .Icon[data-hour='4'] .Sky {
+    top: -300px; }
+  .Icon[data-hour='5'] .Sky {
+    top: -400px; }
+  .Icon[data-hour='6'] .Sky {
+    top: -500px; }
+  .Icon[data-hour='7'] .Sky {
+    top: -600px; }
+  .Icon[data-hour='8'] .Sky {
+    top: -700px; }
+  .Icon[data-hour='9'] .Sky {
+    top: -800px; }
+  .Icon[data-hour='10'] .Sky {
+    top: -900px; }
+  .Icon[data-hour='11'] .Sky {
+    top: -1000px; }
+  .Icon[data-hour='12'] .Sky {
+    top: -1100px; }
+  .Icon[data-hour='13'] .Sky {
+    top: -1200px; }
+  .Icon[data-hour='14'] .Sky {
+    top: -1300px; }
+  .Icon[data-hour='15'] .Sky {
+    top: -1400px; }
+  .Icon[data-hour='16'] .Sky {
+    top: -1500px; }
+  .Icon[data-hour='17'] .Sky {
+    top: -1600px; }
+  .Icon[data-hour='18'] .Sky {
+    top: -1700px; }
+  .Icon[data-hour='19'] .Sky {
+    top: -1800px; }
+  .Icon[data-hour='20'] .Sky {
+    top: -1900px; }
+  .Icon[data-hour='21'] .Sky {
+    top: -2000px; }
+  .Icon[data-hour='22'] .Sky {
+    top: -2100px; }
+  .Icon[data-hour='23'] .Sky {
+    top: -2200px; }
+
+.WeatherIcon {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  z-index: 5;
+  color: white;
+  font-size: 90px;
+  text-align: center; }
+
+.Information {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  z-index: 99;
+  padding: 10px 30px;
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box; }
+  .Information .Location {
+    font-size: 14px;
+    text-transform: uppercase; }

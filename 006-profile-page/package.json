@@ -1,0 +1,23 @@
+{
+  "name": "006-user-profile",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.7.0"
+  },
+  "dependencies": {
+    "concurrently": "^3.1.0",
+    "nodemon": "^1.11.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-css": "node-sass --include-path scss src/App.scss src/App.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "start-with-sass": "concurrently --kill-others \"npm run watch-css\" \"npm start\""
+  }
+}
