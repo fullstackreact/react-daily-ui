@@ -49,7 +49,7 @@ In the series, we will be taking Jack Oliver's code and design and desconstructi
         </tr>
         <tr>
             <td><strong>005</strong></td>
-            <td><img src="resources/images/readme/thumbnails/daily-ui-005.png"></img></td>
+            <td><img style="width:352px" src="resources/images/readme/thumbnails/daily-ui-005.png"></img></td>
             <td>Weather App Icon</td>
             <td align="center"><a href="https://fullstackreact.com/react-daily-ui/005-app-icon/">:white_check_mark: :dolphin: :arrow_right:</a></td>
         </tr>
@@ -61,7 +61,7 @@ In the series, we will be taking Jack Oliver's code and design and desconstructi
         </tr>
         <tr>
             <td><strong>007</strong></td>
-            <td><img src="resources/images/readme/thumbnails/daily-ui-007.png"></img></td>
+            <td><img style="width:352px" src="resources/images/readme/thumbnails/daily-ui-007.png"></img></td>
             <td>Reactagram</td>
             <td align="center"><a href="https://fullstackreact.com/react-daily-ui/007-reactagram/">:white_check_mark: :dolphin: :arrow_right:</a></td>
         </tr>
