@@ -6,9 +6,10 @@
     "react-scripts": "0.4.3"
   },
   "dependencies": {
+    "pluralize": "^5.0.0",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "react-addons-css-transition-group": "^15.3.2"
+    "react-addons-css-transition-group": "^15.3.2",
+    "react-dom": "^15.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
