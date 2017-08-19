@@ -7,13 +7,13 @@ var Input = React.createClass({
 		return (
 			<div className="Input">
 				<input 
-					id={this.props.name}
+					id={this.props.id}
 					autoComplete="false"
 					required
 					type={this.props.type}
 					placeholder={this.props.placeholder}
 				/>	
-				<label htmlFor={this.props.name}></label>
+				<label htmlFor={this.props.id}></label>
 			</div>
 		);
 	}
