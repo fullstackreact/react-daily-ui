@@ -3,7 +3,7 @@ import pluralize from 'pluralize'
 
 var OrderSummary = React.createClass({
   render: function() {
-    var duration = this.props.duration + " " +pluralize('day',this.props.duration);
+    var duration = this.props.duration + " " +pluralize('day',parseInt(this.props.duration));
     
     // Initial total Calculation
     var initialTotal = this.props.duration * this.props.price;
