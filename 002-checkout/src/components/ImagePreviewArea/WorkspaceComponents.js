@@ -2,7 +2,7 @@ import React from 'react'
 import pluralize from 'pluralize'
 
 function Information(props){
-    var duration = pluralize('day',props.duration);
+    var duration = pluralize('day',parseInt(props.duration));
     
     return (
       <div className="WorkspaceInformation">
