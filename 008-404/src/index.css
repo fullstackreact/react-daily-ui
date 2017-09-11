@@ -1,0 +1,85 @@
+@import 'https://fonts.googleapis.com/css?family=Alfa+Slab+One';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+a{
+	text-decoration: none;
+	color:white;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.navigation{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	align-items:center;
+	position: absolute;
+	z-index: 100;
+}
+.navigation li{
+	margin:10px;
+	list-style-type: none;
+	border:1px solid white;
+	cursor: pointer;
+	color:white;
+}
+.navigation li a{
+	color:white;
+	padding:10px;
+	display:block;
+}
+.navigation li:hover, .navigation li.active{
+	background:white;
+	color:black;
+}
+.navigation li:hover a, .navigation li.active a{
+	color:black;
+}
+.page-container {
+  /*position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;*/
+  position:relative;
+  background: #121212;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.page-container .bg {
+  /*position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  mix-blend-mode: overlay;*/
+}
+.page-container .title {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 144px;
+  height: 100vh;
+  color: white;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-position: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}

@@ -1,0 +1,161 @@
+@import "https://fonts.googleapis.com/css?family=Lato:100,300,400,700";
+@import "";
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+  background: #291720;
+  color: #F0EDEE;
+  font-family: 'Lato';
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.App {
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 280px;
+  height: 430px;
+}
+.App .Artwork {
+  width: 280px;
+  height: 280px;
+  background-size: cover;
+  position: relative;
+}
+.App .Artwork:hover .Controls {
+  background: rgba(41, 23, 32, 0.8);
+}
+.App .Artwork .Controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 280px;
+  box-sizing: border-box;
+  background: rgba(41, 23, 32, 0.3);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 20px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background .125s ease;
+  transition: background .125s ease;
+}
+.App .Artwork .Controls i:hover{
+	cursor:pointer;
+}
+.App .Artwork .Controls .fa-play,
+.App .Artwork .Controls .fa-pause {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+.App .TrackList {
+  width: 280px;
+  height: 120px;
+  background: #4a293a;
+  overflow-y: auto;
+  position:relative;
+}
+.App .TrackList li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.App .TrackList li:hover, .App .TrackList li.selected {
+  background: #39202d;
+  cursor: pointer;
+  color: #D90368;
+}
+.App .TrackList li:hover .duration {
+  opacity: 1;
+}
+.App .TrackList li .title {
+  margin-left: 10px;
+  font-weight: 500;
+  letter-spacing: .12em;
+}
+.App .TrackList li .duration {
+  margin-left: auto;
+  opacity: .25;
+}
+.App .MusicCredit, .App .MusicCredit a{
+  color:white;
+  padding:10px;
+  text-align:center;
+  
+}
+.App .MusicCredit a{
+  color: #D90368;
+}

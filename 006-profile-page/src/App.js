@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-console.log(Component);
+
 class App extends Component{
   constructor(props) {
     super(props);
